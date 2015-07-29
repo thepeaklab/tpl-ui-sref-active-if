@@ -8,7 +8,7 @@
     "clean": "(rm -fr .tmp & rm -fr dist) && (mkdir .tmp & mkdir dist)",
     "clean:tmp": "rm -fr .tmp",
     "lint": "jshint lib/*.js",
-    "concat": "cat lib/*.js > .tmp/concatenated.js",
+    "concat": "cat lib/uiSrefActiveIf.module.js > .tmp/concatenated.js && cat lib/uiSrefActiveIf.directive.js >> .tmp/concatenated.js",
     "annotate": "ng-annotate --add .tmp/concatenated.js > .tmp/annotated.js",
     "uglify": "uglifyjs .tmp/annotated.js -o dist/tpl.ui-sref-active-if.min.js",
     "prebuild": "npm run clean & npm run lint",
